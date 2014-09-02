@@ -1,31 +1,32 @@
 VoiceriodNotifier4KanColleViewer
 ==============================
 
-VoiceriodNotifier‚ÍKanColleViewer( http://grabacr.net/kancolleviewer )‚Ì’Ê’m‚ğ
-uVOICEROIDv‚É“Ç‚İã‚°‚³‚¹‚éƒvƒ‰ƒOƒCƒ“‚Å‚·B
+VoiceriodNotifierã¯KanColleViewer( http://grabacr.net/kancolleviewer )ã®é€šçŸ¥ã‚’
+ã€ŒVOICEROIDã€ã«èª­ã¿ä¸Šã’ã•ã›ã‚‹ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã§ã™ã€‚
 
-*** version1.0Œ»İŒ‹Œ‚ä‚©‚è‚Ì‚İ“®ìŠm”F ***
+*** Windows7ã®ã¿å‹•ä½œç¢ºèª ***
+*** version1.0ç¾åœ¨çµæœˆã‚†ã‹ã‚Šã®ã¿å‹•ä½œç¢ºèª ***
 
-ÀsƒtƒHƒ‹ƒ_“à‚ÌuPluginsvƒtƒHƒ‹ƒ_“à‚É–{ƒvƒ‰ƒOƒCƒ“‚ğˆÚ“®‚µ‚Ä‚­‚¾‚³‚¢B
+å®Ÿè¡Œãƒ•ã‚©ãƒ«ãƒ€å†…ã®ã€ŒPluginsã€ãƒ•ã‚©ãƒ«ãƒ€å†…ã«æœ¬ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã‚’ç§»å‹•ã—ã¦ãã ã•ã„ã€‚
 
 
-–{ƒ\ƒtƒg‚ÍNMeCab( http://sourceforge.jp/projects/nmecab/ )‚ğg—p‚µ‚Ä‚¢‚Ü‚·B
-ÀsƒtƒHƒ‹ƒ_‚É
-EdicˆÈ‰ºƒtƒHƒ‹ƒ_
-ELibNMeCab.dll
-‚ğ”z’u‚µ‚Ä‚­‚¾‚³‚¢B
+æœ¬ã‚½ãƒ•ãƒˆã¯NMeCab( http://sourceforge.jp/projects/nmecab/ )ã‚’ä½¿ç”¨ã—ã¦ã„ã¾ã™ã€‚
+å®Ÿè¡Œãƒ•ã‚©ãƒ«ãƒ€ã«
+ãƒ»dicä»¥ä¸‹ãƒ•ã‚©ãƒ«ãƒ€
+ãƒ»LibNMeCab.dll
+ã‚’é…ç½®ã—ã¦ãã ã•ã„ã€‚
 
 
 
 Copyright 2014 @saga_dash
 
-ƒ‰ƒCƒZƒ“ƒXŠÖ˜A Apache License Veersion2.0
+ãƒ©ã‚¤ã‚»ãƒ³ã‚¹é–¢é€£ Apache License Veersion2.0
 
-»ìÒ
+è£½ä½œè€…
 	twitter: @saga_dash
 
 
-“®ìŠm”FŠÂ‹«
+å‹•ä½œç¢ºèªç’°å¢ƒ
 	MicrosoftR WindowsR 7
 	.NET Framework 3.5
 	NMeCab 0.06.4
