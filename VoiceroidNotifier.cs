@@ -40,14 +40,15 @@ namespace saga.voiceroid
         {
             if (firstFlag)
             {
-                System.Windows.Window window = new System.Windows.Window
+                var dispatcher = System.Windows.Application.Current.Dispatcher;
+                if (dispatcher.CheckAccess())
                 {
-                    Title = "Voiceroid選択",
-                    Content = this.GetSettingsView(),
-                    Width = 300,
-                    Height = 200
-                };
-                window.ShowDialog();
+                    ShowDialog();
+                }
+                else
+                {
+                    dispatcher.Invoke(() => ShowDialog());
+                } 
                 firstFlag = false;
             }
 
@@ -56,6 +57,16 @@ namespace saga.voiceroid
                 Run(body);
 //                System.Threading.Thread.Sleep(300);
             });
+        }
+        private void ShowDialog()
+        {
+                System.Windows.Window window = new System.Windows.Window
+                {
+                    Content = this.GetSettingsView(),
+                    Width = 300,
+                    Height = 200
+                };
+                window.ShowDialog();
         }
 
         private void Run(string message)
