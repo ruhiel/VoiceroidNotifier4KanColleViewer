@@ -8,7 +8,9 @@ using System.Reflection;
 using System.Windows.Input;
 using Livet;
 
-namespace saga.voiceroid
+using saga.voiceroid;
+
+namespace saga.kancolle
 {
 	public class SettingsViewModel : ViewModel
 	{

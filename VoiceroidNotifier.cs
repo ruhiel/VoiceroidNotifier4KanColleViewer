@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 using System.Reflection;
 using Grabacr07.KanColleViewer.Composition;
 
+using saga.voiceroid;
 
-namespace saga.voiceroid
+namespace saga.kancolle
 {
     [Export(typeof(INotifier))]
     //[Export(typeof(IToolPlugin))]

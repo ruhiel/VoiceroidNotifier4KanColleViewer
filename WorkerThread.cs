@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-namespace saga.voiceroid
+namespace saga.kancolle
 {
     //http://d.hatena.ne.jp/zarchis/20101015
     public class WorkerThread : IDisposable

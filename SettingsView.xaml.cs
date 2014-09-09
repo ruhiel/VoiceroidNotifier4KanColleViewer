@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace saga.voiceroid
+namespace saga.kancolle
 {
 	/// <summary>
     /// SettingView.xaml の相互作用ロジック
