@@ -1,11 +1,11 @@
-VoiceriodNotifier4KanColleViewer
+﻿VoiceroidNotifier4KanColleViewer
 ==============================
 
-VoiceriodNotifierはKanColleViewer( http://grabacr.net/kancolleviewer )の通知を
+VoiceroidNotifierはKanColleViewer( http://grabacr.net/kancolleviewer )の通知を
 「VOICEROID」に読み上げさせるプラグインです。
 
 *** Windows7のみ動作確認 ***
-*** version1.0現在結月ゆかりのみ動作確認 ***
+*** 結月ゆかり,結月ゆかりEX,琴葉茜,琴葉葵のみ動作確認 ***
 
 実行フォルダ内の「Plugins」フォルダ内に本プラグインを移動してください。
 

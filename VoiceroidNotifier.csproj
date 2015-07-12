@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>saga.kancolle</RootNamespace>
-    <AssemblyName>VoiceriodNotifier</AssemblyName>
+    <AssemblyName>VoiceroidNotifier</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -78,7 +78,8 @@
     <PostBuildEvent>mkdir $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\Plugins
 xcopy /Y $(TargetDir)*.* $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)
 move $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\$(TargetName).* $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\Plugins
-move $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\VoiceroidNotifyCore.dll $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\Plugins\VoiceroidNotifyCore.dll</PostBuildEvent>
+move $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\VoiceroidNotifyCore.dll $(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\Plugins\VoiceroidNotifyCore.dll
+xcopy /Y /E "$(SolutionDir)packages\NMeCab.0.06.4\content\net45\dic" "$(SolutionDir)Grabacr07.KanColleViewer\bin\$(ConfigurationName)\dic\"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
