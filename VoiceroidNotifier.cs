@@ -15,7 +15,7 @@ namespace saga.kancolle
     //[Export(typeof(IToolPlugin))]
     [ExportMetadata("Title", "VoiceroidNotifier")]
     [ExportMetadata("Description", "Voiceroidを使用して通知します。")]
-    [ExportMetadata("Version", "1.1")]
+    [ExportMetadata("Version", "1.2")]
     [ExportMetadata("Author", "@saga_dash")]
     public class VoiceroidNotifier : INotifier, IToolPlugin
     {
