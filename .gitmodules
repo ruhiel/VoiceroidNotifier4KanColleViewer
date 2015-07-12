@@ -1,0 +1,3 @@
+[submodule "VoiceroidCore"]
+	path = VoiceroidCore
+	url = https://github.com/saga-dash/VoiceroidEx
