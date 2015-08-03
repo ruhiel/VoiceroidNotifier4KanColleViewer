@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Reflection;
 using Grabacr07.KanColleViewer.Composition;
 
@@ -11,13 +7,14 @@ using saga.voiceroid;
 
 namespace saga.kancolle
 {
-    [Export(typeof(INotifier))]
-    //[Export(typeof(IToolPlugin))]
+    [Export(typeof(IPlugin))]
+    [InheritedExport(typeof(INotifier))]
+    [ExportMetadata("Guid", "648b55ff-92a2-4c4a-8bb9-7f9edaa999df")]
     [ExportMetadata("Title", "VoiceroidNotifier")]
     [ExportMetadata("Description", "Voiceroidを使用して通知します。")]
-    [ExportMetadata("Version", "1.2")]
+    [ExportMetadata("Version", "1.3")]
     [ExportMetadata("Author", "@saga_dash")]
-    public class VoiceroidNotifier : INotifier, IToolPlugin
+    public class VoiceroidNotifier : IPlugin, INotifier, IDisposable
     {
         //private static List<VoiceroidNotify> voiceroid = new List<VoiceroidNotify>();
         private static WorkerThread thread;
@@ -33,11 +30,11 @@ namespace saga.kancolle
             Type VoiceroidFactory4Win7 = m.GetType("saga.voiceroid.VoiceroidFactory4Win7");
             VoiceroidInfo[] info = (VoiceroidInfo[])(VoiceroidFactory4Win7.GetMethod("CreateAll").Invoke(null, null));
             viewmodel = new SettingsViewModel(info);
-            //voiceroid = new VoiceroidNotify4Win7("Plugins/dic/ipadic", info);
+
             thread = new WorkerThread();
         }
 
-        public void Show(NotifyType type, string header, string body, Action activated, Action<Exception> failed)
+        public void Notify(INotification notification)
         {
             if (firstFlag)
             {
@@ -55,7 +52,7 @@ namespace saga.kancolle
 
             thread.Add(delegate()
             {
-                Run(body);
+                Run(notification.Body);
 //                System.Threading.Thread.Sleep(300);
             });
         }
@@ -85,24 +82,12 @@ namespace saga.kancolle
             }
         }
 
-        public string ToolName
-        {
-            get { return "Voiceroid"; }
-        }
-
-        public object GetToolView()
-        {
-            return null;
-        }
-
         public object GetSettingsView()
         {
             return new SettingsView { DataContext = this.viewmodel,};
         }
 
-        public void Dispose()
-        {
-        }
+        public void Dispose() { }
     }
 
 }
