@@ -12,7 +12,7 @@ namespace saga.kancolle
     [ExportMetadata("Guid", "648b55ff-92a2-4c4a-8bb9-7f9edaa999df")]
     [ExportMetadata("Title", "VoiceroidNotifier")]
     [ExportMetadata("Description", "Voiceroidを使用して通知します。")]
-    [ExportMetadata("Version", "1.3")]
+    [ExportMetadata("Version", "1.3.1")]
     [ExportMetadata("Author", "@saga_dash")]
     public class VoiceroidNotifier : IPlugin, INotifier, IDisposable
     {
@@ -58,13 +58,13 @@ namespace saga.kancolle
         }
         private void ShowDialog()
         {
-                System.Windows.Window window = new System.Windows.Window
-                {
-                    Content = this.GetSettingsView(),
-                    Width = 300,
-                    Height = 200
-                };
-                window.ShowDialog();
+            System.Windows.Window window = new System.Windows.Window
+            {
+                Content = this.GetSettingsView(),
+                Width = 300,
+                Height = 200
+            };
+            window.ShowDialog();
         }
 
         private void Run(string message)
@@ -72,7 +72,7 @@ namespace saga.kancolle
             try
             {
                 Assembly m = Assembly.LoadFrom("Plugins/VoiceroidNotifyCore.dll");
-                VoiceroidNotify voiceroid = (VoiceroidNotify)Activator.CreateInstance(m.GetType("saga.voiceroid.VoiceroidNotify4Win7"), new object[] { "Plugins/dic/ipadic", viewmodel.SelectedVoiceroid });
+                VoiceroidNotify voiceroid = (VoiceroidNotify)Activator.CreateInstance(m.GetType("saga.voiceroid.VoiceroidNotify4Win7"), new object[] { "dic/ipadic", viewmodel.SelectedVoiceroid });
                 voiceroid.SetPlayText(message);
                 voiceroid.Play();
             }
